@@ -4,7 +4,7 @@
   grid-template-rows: 3fr;
   max-width: 90%;
   margin: auto;
-  box-shadow: 0 0 20px $colorGrayishBlue;
+  box-shadow: 0 9px 25px rgba(0, 0, 0, 0.2);
   border-radius: 7px;
 
   @include breakpoint-md {
