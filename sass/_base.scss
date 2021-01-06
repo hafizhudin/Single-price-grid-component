@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+// VARIABLES
+$color-cyan: hsl(179, 62%, 43%);
+$color-cyan2: hsl(179, 39%, 51%);
+$color-yellow: hsl(71, 73%, 54%);
+$color-graydark: hsl(218, 22%, 67%);
+$color-gray: hsl(204, 43%, 93%);
+
+// MIXINS
+$media_queries-mobile: 667px;
+$media_queries-table: 668px;
+// (
+//   "mobile": "only screen and (max-width: 667px)",
+//   "tablet":
+//     "only screen and (min-width: 668px) and (max-width: $size__site_content_width)",
+//   "desktop": "only screen and (min-width: ($size__site_content_width + 1))",
+//   "retina2":
+//     "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)",
+//   "retina3":
+//     "only screen and (-webkit-min-device-pixel-ratio: 3) and (min-resolution: 288dpi)",
+//   "landscape": "screen and (orientation:landscape) ",
+//   "portrait": "screen and (orientation:portrait) ",
+// );
+
+// RESET
+* {
+  //   margin: 0;
+  //   padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Karla", sans-serif;
+}
+// box-sizing: border-box;
+
+// TYPOGRAPHY {
+p {
+  font-weight: 400;
+}
+
+.grid-1 {
+  h2 {
+    font-weight: 700;
+    color: $color-cyan;
+  }
+  .grid-1-heading {
+    font-weight: 700;
+    color: $color-yellow;
+  }
+  p {
+    color: $color-graydark;
+  }
+}
+
+.grid-2,
+.grid-3 {
+  color: $color-gray;
+}
+
+.grid-2 {
+  .price {
+    color: $color-gray;
+    .dollar {
+      font-size: 40px;
+      color: $color-gray;
+    }
+  }
+}
+
+.grid-3 {
+  p {
+    font-weight: 400;
+    color: $color-gray;
+  }
+}
