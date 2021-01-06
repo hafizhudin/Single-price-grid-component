@@ -1,75 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
 // VARIABLES
-$color-cyan: hsl(179, 62%, 43%);
-$color-cyan2: hsl(179, 39%, 51%);
-$color-yellow: hsl(71, 73%, 54%);
-$color-graydark: hsl(218, 22%, 67%);
-$color-gray: hsl(204, 43%, 93%);
+
+// Color
+$colorCyan: hsl(179, 62%, 43%);
+$colorCyanDark: hsl(178, 35%, 57%);
+$colorBirghtYellow: hsl(71, 73%, 54%);
+$colorLightGray: hsl(204, 43%, 93%);
+$colorGrayishBlue: hsl(218, 22%, 67%);
+
+// Breakpoints
+$breakpoint-md: 44.5rem;
 
 // MIXINS
-$media_queries-mobile: 667px;
-$media_queries-table: 668px;
-// (
-//   "mobile": "only screen and (max-width: 667px)",
-//   "tablet":
-//     "only screen and (min-width: 668px) and (max-width: $size__site_content_width)",
-//   "desktop": "only screen and (min-width: ($size__site_content_width + 1))",
-//   "retina2":
-//     "only screen and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)",
-//   "retina3":
-//     "only screen and (-webkit-min-device-pixel-ratio: 3) and (min-resolution: 288dpi)",
-//   "landscape": "screen and (orientation:landscape) ",
-//   "portrait": "screen and (orientation:portrait) ",
-// );
+@mixin breakpoint-md {
+  @media (min-width: #{$breakpoint-md}) {
+    @content;
+  }
+}
 
 // RESET
-* {
-  //   margin: 0;
-  //   padding: 0;
-  text-decoration: none;
-  list-style: none;
-  font-family: "Karla", sans-serif;
-}
-// box-sizing: border-box;
 
-// TYPOGRAPHY {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  //   background-color: $colorGrayishBlue;
+  font-size: 1em;
+  font-family: "Karla", sans-serif;
+  color: $colorLightGray;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 p {
   font-weight: 400;
 }
 
-.grid-1 {
+.grid1 {
+  color: $colorGrayishBlue;
   h2 {
-    font-weight: 700;
-    color: $color-cyan;
+    color: $colorCyan;
   }
-  .grid-1-heading {
-    font-weight: 700;
-    color: $color-yellow;
+  &__subHeading {
+    color: $colorBirghtYellow;
   }
+}
+
+.grid3 {
   p {
-    color: $color-graydark;
-  }
-}
-
-.grid-2,
-.grid-3 {
-  color: $color-gray;
-}
-
-.grid-2 {
-  .price {
-    color: $color-gray;
-    .dollar {
-      font-size: 40px;
-      color: $color-gray;
-    }
-  }
-}
-
-.grid-3 {
-  p {
-    font-weight: 400;
-    color: $color-gray;
+    color: $colorLightGray;
   }
 }
